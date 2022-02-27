@@ -6,7 +6,7 @@ module.exports = {
   manifestBackgroundColor: '#663399',
   manifestThemeColor: '#663399',
   manifestDisplay: 'standalone',
-  manifestIcon: 'src/assets/img/website-icon.png',
+  manifestIcon: 'src/assets/img/favicon.png',
   pathPrefix: `/gatsby-starter-grayscale/`, // This path is subpath of your hosting https://domain/portfolio
   heading: 'Arbide eskalada taldea',
   subHeading: 'Arbide eskalada taldea 2021ean sortu zen Ondarroan dagoen eskalada zaletasunarentzako baliabide egokiak sortu eta eskaintzeko asmoarekin.',
