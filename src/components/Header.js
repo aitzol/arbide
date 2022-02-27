@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Scroll from './Scroll';
 import config from '../../config';
+import arbideLogo from  '../assets/images/arbide_logo.png';
+
 export default class Header extends Component {
   constructor(props) {
     super(props);
@@ -40,62 +42,65 @@ export default class Header extends Component {
         id="mainNav"
       >
         <div className="container">
-          <a className="navbar-brand" href="#page-top">
-            {config.siteTitle}
-          </a>
-          <button
-            onClick={_ => this.toggleMenu(!openMenu)}
-            className={`navbar-toggler navbar-toggler-right ${
-              openMenu ? '' : 'collapsed'
-            }`}
-            type="button"
-            aria-controls="navbarResponsive"
-            aria-expanded={openMenu}
-            aria-label="Toggle navigation"
-          >
-            Menu
-            <i className="fas fa-bars"></i>
-          </button>
-          <div
-            className={`collapse navbar-collapse ${openMenu ? 'show' : ''}`}
-            id="navbarResponsive"
-          >
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <Scroll
-                  onClick={_ => this.toggleMenu(!openMenu)}
-                  type="id"
-                  element="about"
-                >
-                  <a className="nav-link" href="#about">
-                    About
-                  </a>
-                </Scroll>
-              </li>
-              <li className="nav-item">
-                <Scroll
-                  onClick={_ => this.toggleMenu(!openMenu)}
-                  type="id"
-                  element="projects"
-                >
-                  <a className="nav-link" href="#projects">
-                    Projects
-                  </a>
-                </Scroll>
-              </li>
-              <li className="nav-item">
-                <Scroll
-                  onClick={_ => this.toggleMenu(!openMenu)}
-                  type="id"
-                  element="signup"
-                >
-                  <a className="nav-link" href="#signup">
-                    Contact
-                  </a>
-                </Scroll>
-              </li>
-            </ul>
-          </div>
+
+              <a className="navbar-brand" href="#page-top">
+                <img className="bg-white rounded" height="120" src={arbideLogo} alt={config.siteTitle} />
+              </a>
+           
+              <button
+                onClick={_ => this.toggleMenu(!openMenu)}
+                className={`navbar-toggler navbar-toggler-right ${
+                  openMenu ? '' : 'collapsed'
+                }`}
+                type="button"
+                aria-controls="navbarResponsive"
+                aria-expanded={openMenu}
+                aria-label="Toggle navigation"
+              >
+                Menua
+                <i className="fas fa-bars"></i>
+              </button>
+              <div
+                className={`collapse navbar-collapse ${openMenu ? 'show' : ''}`}
+                id="navbarResponsive"
+              >
+                <ul className="navbar-nav ml-auto">
+                  <li className="nav-item">
+                    <Scroll
+                      onClick={_ => this.toggleMenu(!openMenu)}
+                      type="id"
+                      element="taldea"
+                    >
+                      <a className="nav-link" href="#about">
+                        Eskalada taldea
+                      </a>
+                    </Scroll>
+                  </li>
+                  <li className="nav-item">
+                    <Scroll
+                      onClick={_ => this.toggleMenu(!openMenu)}
+                      type="id"
+                      element="rokodromoa"
+                    >
+                      <a className="nav-link" href="#projects">
+                        Rokodromoa
+                      </a>
+                    </Scroll>
+                  </li>
+                  <li className="nav-item">
+                    <Scroll
+                      onClick={_ => this.toggleMenu(!openMenu)}
+                      type="id"
+                      element="contact"
+                    >
+                      <a className="nav-link" href="#signup">
+                        Kontaktua
+                      </a>
+                    </Scroll>
+                  </li>
+                </ul>
+              </div>
+      
         </div>
       </nav>
     );

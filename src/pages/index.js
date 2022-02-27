@@ -1,18 +1,16 @@
 import React from 'react';
 
 import Layout from '../components/Layout';
-import Scroll from '../components/Scroll';
 
 import config from '../../config';
 import Footer from '../components/Footer';
 import SocialLinks from '../components/SocialLinks';
-import Subscribe from '../components/Subscribe';
 import Header from '../components/Header';
 
-import ipad from '../assets/images/ipad.png';
-import demoImage1 from '../assets/images/demo-image-01.jpg';
-import demoImage2 from '../assets/images/demo-image-02.jpg';
-import bgMaster from '../assets/images/bg-masthead.jpg';
+import eskalada from '../assets/images/climbing.png';
+
+
+import bgRokodromoa from '../assets/images/rokodromoa.jpg';
 
 const IndexPage = () => (
   <Layout>
@@ -25,52 +23,42 @@ const IndexPage = () => (
           <h2 className="text-white-50 mx-auto mt-2 mb-5">
             {config.subHeading}
           </h2>
-          <Scroll type="id" element="about">
-            <a href="#about" className="btn btn-primary">
-              About
-            </a>
-          </Scroll>
         </div>
       </div>
     </header>
 
-    <section id="about" className="about-section text-center">
+    <section id="taldea" className="about-section text-center">
       <div className="container">
         <div className="row">
           <div className="col-lg-8 mx-auto">
-            <h2 className="text-white mb-4">Built with Bootstrap 4</h2>
+            <h2 className="text-white mb-4">Eskalada taldea</h2>
             <p className="text-white-50">
-              Grayscale is a free Bootstrap theme created by Start Bootstrap. It
-              can be yours right now, simply download the starter on
-              <a href="https://github.com/anubhavsrivastava/gatsby-starter-grayscale">
-                the github repo
-              </a>
-              .
+              Arbide eskalada taldea 2021ean sortu zen Ondarroan dagoen eskalada 
+              zaletasunarentzako baliabide egokiak sortu eta eskaintzeko asmoarekin.
             </p>
           </div>
         </div>
-        <img src={ipad} className="img-fluid" alt="" />
+        <img src={eskalada} className="img-fluid" alt="" />
       </div>
     </section>
 
-    <section id="projects" className="projects-section bg-light">
+    <section id="rokodromoa" className="projects-section bg-light">
       <div className="container">
         <div className="row align-items-center no-gutters mb-4 mb-lg-5">
           <div className="col-xl-8 col-lg-7">
-            <img className="img-fluid mb-3 mb-lg-0" src={bgMaster} alt="" />
+            <img className="img-fluid mb-3 mb-lg-0" src={bgRokodromoa} alt="" />
           </div>
           <div className="col-xl-4 col-lg-5">
             <div className="featured-text text-center text-lg-left">
-              <h4>Shoreline</h4>
+              <h4>Rokodromoa</h4>
               <p className="text-black-50 mb-0">
-                Grayscale is open source and MIT licensed. This means you can
-                use it for any project - even commercial projects! Download it,
-                customize it, and publish your website!
+                Taldelanean eraikitzen ari gara tamaina handiko rokodromo bat. 
+                Bertan eskainiko dira...
               </p>
             </div>
           </div>
         </div>
-
+        {/*
         <div className="row justify-content-center no-gutters mb-5 mb-lg-0">
           <div className="col-lg-6">
             <img className="img-fluid" src={demoImage1} alt="" />
@@ -111,11 +99,11 @@ const IndexPage = () => (
             </div>
           </div>
         </div>
+        */}
       </div>
     </section>
-
-    <Subscribe />
-
+    <section id="contact" className="projects-section bg-light"></section>
+    <section id="laguntzaileak" classname="projects-section bg-light"></section>
     <SocialLinks />
     <Footer />
   </Layout>
