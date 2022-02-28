@@ -24,7 +24,7 @@ class Layout extends Component {
             <Helmet
               title={data.site.siteMetadata.title}
               meta={[
-                { name: 'description', content: 'Grayscale' },
+                { name: 'description', content: 'Arbide eskalada taldearen webgunea' },
                 { name: 'keywords', content: 'site, web' },
               ]}
             >
