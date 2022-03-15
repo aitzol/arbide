@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Scroll from './Scroll';
 import config from '../../config';
 import arbideLogo from  '../assets/images/arbide_logo.png';
+import { Link } from "gatsby"
 
 export default class Header extends Component {
   constructor(props) {
@@ -43,7 +44,7 @@ export default class Header extends Component {
       >
         <div className="container">
 
-              <a className="navbar-brand" href="#page-top">
+              <a className="navbar-brand" href="/">
                 <img className="bg-white rounded" height="120" src={arbideLogo} alt={config.siteTitle} />
               </a>
            
@@ -66,6 +67,7 @@ export default class Header extends Component {
               >
                 <ul className="navbar-nav ml-auto">
                   <li className="nav-item">
+                      {/*
                     <Scroll
                       onClick={_ => this.toggleMenu(!openMenu)}
                       type="id"
@@ -75,8 +77,11 @@ export default class Header extends Component {
                         Eskalada taldea
                       </a>
                     </Scroll>
+              */}
+                    <Link to="/" className='nav-link'>Eskalada taldea</Link>
                   </li>
                   <li className="nav-item">
+                    {/*}
                     <Scroll
                       onClick={_ => this.toggleMenu(!openMenu)}
                       type="id"
@@ -86,8 +91,14 @@ export default class Header extends Component {
                         Rokodromoa
                       </a>
                     </Scroll>
+            */} 
+              <Link to="/rokodromoa" className='nav-link'>Rokodromoa</Link>
                   </li>
                   <li className="nav-item">
+                  <Link to="/erropak" className='nav-link'>Erropak</Link>
+                  </li>
+                  <li className="nav-item">
+                    {/*
                     <Scroll
                       onClick={_ => this.toggleMenu(!openMenu)}
                       type="id"
@@ -97,6 +108,8 @@ export default class Header extends Component {
                         Kontaktua
                       </a>
                     </Scroll>
+          */}
+                  <Link to="/kontaktua" className='nav-link'>Kontaktua</Link>
                   </li>
                 </ul>
               </div>
