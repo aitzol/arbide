@@ -25,6 +25,7 @@ async function handleRequest({context, env}) {
         Emaila: ${input.email}
         Mezua: ${input.mezua}
         `
+        /*
         let res = await fetch("https://api.sendgrid.com/v3/mail/send", {
             method: "POST",
             headers: {
@@ -43,6 +44,25 @@ async function handleRequest({context, env}) {
                 }
               })
             })
+        */
+        let res = await fetch("https://httpbin.org/post", {
+          method: "POST",
+          headers: {
+            Authorization: "Bearer " + env.sendgrid_api_key
+          },
+          body: JSON.stringify({
+              personalizations: {
+                to: [{email: to, name: name}],
+                subject: subject,
+                content: [{
+                  type: "text/plain",
+                  value: mezua
+                }],
+                from: {email: "ez-erantzun@arbide.eus", name: "ez-erantzun"},
+                reply_to: {email: "ez-erantzun@arbide.eus", name: "ez-erantzun"}
+              }
+            })
+          }) 
         let result = await gatherResponse()
         if (result.ok){
           statusMsg="Mezua ondo bidali da"
