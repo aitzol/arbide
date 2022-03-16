@@ -1,10 +1,10 @@
 import React from 'react';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
 export default class EskariaForm extends React.Component {
     state = {
         izena: "",
-        abizenak: "",
-        telefonoa: "",
         emaila: "",
         mezua: "",
     }
@@ -16,59 +16,47 @@ export default class EskariaForm extends React.Component {
           [name]: value,
         })
       }
-    handleSubmit = event => {
+    handleSubmit = async(event) => {
         event.preventDefault();
-        alert(`Welcome ${this.state.izena} ${this.state.abizenak}!`);
-    }
+        try {
+          let res = await fetch("/api/bidali", {
+          method: "POST",
+          body: JSON.stringify({
+            name: this.state.izena,
+            email: this.state.email,
+            mezua: this.state.mezua,
+          })})
+          let resJson = await res.json();
+            if (res.status === 200) {
+              console.log(resJson);
+            } else {
+              console.log("Some error occured");
+            }
+        } catch (err) {
+          console.log(err);
+        }
+      };
+
     render() {
         return (
-          <form onSubmit={this.handleSubmit}>
-            <label>
-              Izena
-              <input
-                type="text"
-                name="izena"
-                value={this.state.izena}
-                onChange={this.handleInputChange}
-              />
-            </label>
-            <label>
-              Abizenak
-              <input
-                type="text"
-                name="abizenak"
-                value={this.state.abizenak}
-                onChange={this.handleInputChange}
-              />
-            </label>
-            <label>
-              Telefonoa
-              <input
-                type="text"
-                name="telefonoa"
-                value={this.state.telefonoa}
-                onChange={this.handleInputChange}
-              />
-            </label>
-            <label>
-              Emaila
-              <input
-                type="text"
-                name="emaila"
-                value={this.state.emaila}
-                onChange={this.handleInputChange}
-              />
-            </label>
-            <label>
-              Mezua
-              <textarea
-                name="mezua"
-                value={this.state.mezua}
-                onChange={this.handleInputChange}
-              />
-            </label>
-            <button type="submit">Bidali</button>
-          </form>
+          <Form onSubmit={this.handleSubmit}>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label>Izena</Form.Label>
+              <Form.Control placeholder="Zure izena" />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label>Eposta helbidea</Form.Label>
+              <Form.Control type="email" placeholder="Zure eposta helbidea" />
+              <Form.Text className="text-muted">
+                Erantzunen bat eman ahal izateko baino ez dugu erabiliko
+              </Form.Text>
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label>Mezua</Form.Label>
+              <Form.Control as="textarea" placeholder="" />
+            </Form.Group>
+            <Button type="submit">Bidali</Button>
+          </Form>
         )
       }
     };  
