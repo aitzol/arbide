@@ -1,4 +1,19 @@
-export async function onRequestPost({context, env}) {
+async function gatherResponse(response) {
+  const { headers } = response;
+  const contentType = headers.get('content-type') || '';
+  if (contentType.includes('application/json')) {
+    return JSON.stringify(await response.json());
+  } else if (contentType.includes('application/text')) {
+    return response.text();
+  } else if (contentType.includes('text/html')) {
+    return response.text();
+  } else {
+    return response.text();
+  }
+}
+
+
+async function handleRequest({context, env}) {
     try {
         let statusMsg;
         let input = await context.request.formData();
@@ -28,10 +43,11 @@ export async function onRequestPost({context, env}) {
                 }
               })
             })
-        if (res.ok){
+        let result = await gatherResponse()
+        if (result.ok){
           statusMsg="Mezua ondo bidali da"
         } else {
-          statusMsg="Errorea bidalketan. " + res.status
+          statusMsg="Errorea bidalketan. " + result.status
         }
         return new Response(statusMsg, {
           headers: {
@@ -43,4 +59,7 @@ export async function onRequestPost({context, env}) {
       }
     
   }
+  addEventListener('fetch', (event, context, env) => {
+    return event.respondWith(handleRequest({context, env}));
+  });
   
