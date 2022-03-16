@@ -16,14 +16,15 @@ export default class EskariaForm extends React.Component {
           [name]: value,
         })
       }
+    
     handleSubmit = async(event) => {
         event.preventDefault();
         try {
           let res = await fetch("/api/bidali", {
           method: "POST",
           body: JSON.stringify({
-            name: this.state.izena,
-            email: this.state.email,
+            izena: this.state.izena,
+            email: this.state.emaila,
             mezua: this.state.mezua,
           })})
           let resJson = await res.json();
@@ -40,11 +41,11 @@ export default class EskariaForm extends React.Component {
     render() {
         return (
           <Form onSubmit={this.handleSubmit}>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3" controlId="izena">
               <Form.Label>Izena</Form.Label>
               <Form.Control placeholder="Zure izena" />
             </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3" controlId="email">
               <Form.Label>Eposta helbidea</Form.Label>
               <Form.Control type="email" placeholder="Zure eposta helbidea" />
               <Form.Text className="text-muted">
