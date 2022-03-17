@@ -11,7 +11,7 @@ export default class EskariaForm extends React.Component {
     handleInputChange = event => {
         const target = event.target
         const value = target.value
-        const name = target.name
+        const name = target.id
         this.setState({
           [name]: value,
         })
@@ -24,15 +24,15 @@ export default class EskariaForm extends React.Component {
           method: "POST",
           body: JSON.stringify({
             izena: this.state.izena,
-            email: this.state.emaila,
+            emaila: this.state.emaila,
             mezua: this.state.mezua,
           })})
           let resJson = await res.json();
-            if (res.status === 200) {
+          if (res.status === 200) {
               console.log(resJson);
-            } else {
+          } else {
               console.log("Some error occured");
-            }
+          }
         } catch (err) {
           console.log(err);
         }
@@ -41,20 +41,20 @@ export default class EskariaForm extends React.Component {
     render() {
         return (
           <Form onSubmit={this.handleSubmit}>
-            <Form.Group className="mb-3" controlId="izena">
+            <Form.Group className="mb-3" controlId="izena" name="izena">
               <Form.Label>Izena</Form.Label>
-              <Form.Control placeholder="Zure izena" />
+              <Form.Control placeholder="Zure izena" onChange={this.handleInputChange}/>
             </Form.Group>
-            <Form.Group className="mb-3" controlId="email">
+            <Form.Group className="mb-3" controlId="emaila" name="emaila">
               <Form.Label>Eposta helbidea</Form.Label>
-              <Form.Control type="email" placeholder="Zure eposta helbidea" />
+              <Form.Control type="email" name="mezua" placeholder="Zure eposta helbidea" onChange={this.handleInputChange} />
               <Form.Text className="text-muted">
                 Erantzunen bat eman ahal izateko baino ez dugu erabiliko
               </Form.Text>
             </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3" controlId="mezua">
               <Form.Label>Mezua</Form.Label>
-              <Form.Control as="textarea" placeholder="" />
+              <Form.Control as="textarea" placeholder="" onChange={this.handleInputChange}/>
             </Form.Group>
             <Button type="submit">Bidali</Button>
           </Form>
