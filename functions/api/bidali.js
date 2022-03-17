@@ -13,11 +13,12 @@ async function gatherResponse(response) {
 }
 
 
-async function handleRequest({context, env}) {
+async function handleRequest(event) {
     try {
         let statusMsg;
-        let input = await context.request.formData();
-        let to = env.CONTACT_FORM_TO;
+        let input = await event.request.json();
+        let from = EMAIL_FROM;
+        let to = CONTACT_FORM_TO;
         let name = "Arbide"
         let subject = "Mezu berria webgunetik" 
         let mezua = `
@@ -25,11 +26,11 @@ async function handleRequest({context, env}) {
         Emaila: ${input.email}
         Mezua: ${input.mezua}
         `
-        /*
+        
         let res = await fetch("https://api.sendgrid.com/v3/mail/send", {
             method: "POST",
             headers: {
-              Authorization: "Bearer " + env.sendgrid_api_key
+              Authorization: "Bearer " + sendgrid_api_key
             },
             body: JSON.stringify({
                 personalizations: {
@@ -39,31 +40,13 @@ async function handleRequest({context, env}) {
                     type: "text/plain",
                     value: mezua
                   }],
-                  from: {email: "ez-erantzun@arbide.eus", name: "ez-erantzun"},
-                  reply_to: {email: "ez-erantzun@arbide.eus", name: "ez-erantzun"}
+                  from: {email: EMAIL_FROM, name: "ez-erantzun"},
+                  reply_to: {email: EMAIL_FROM, name: "ez-erantzun"}
                 }
               })
             })
-        */
-        let res = await fetch("https://httpbin.org/post", {
-          method: "POST",
-          headers: {
-            Authorization: "Bearer " + env.sendgrid_api_key
-          },
-          body: JSON.stringify({
-              personalizations: {
-                to: [{email: to, name: name}],
-                subject: subject,
-                content: [{
-                  type: "text/plain",
-                  value: mezua
-                }],
-                from: {email: "ez-erantzun@arbide.eus", name: "ez-erantzun"},
-                reply_to: {email: "ez-erantzun@arbide.eus", name: "ez-erantzun"}
-              }
-            })
-          }) 
-        let result = await gatherResponse()
+
+        let result = await gatherResponse(res)
         if (result.ok){
           statusMsg="Mezua ondo bidali da"
         } else {
@@ -75,11 +58,11 @@ async function handleRequest({context, env}) {
           },
         });
       } catch (err) {
-        return new Response('Error parsing JSON content', { status: 400 });
+        return new Response('Error parsing JSON content' + err, { status: 400 });
       }
     
   }
-  addEventListener('fetch', (event, context, env) => {
-    return event.respondWith(handleRequest({context, env}));
+  addEventListener('fetch', (event,env) => {
+    return event.respondWith(handleRequest(event));
   });
   
