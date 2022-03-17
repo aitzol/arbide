@@ -17,8 +17,6 @@ async function handleRequest(event) {
     try {
         let statusMsg;
         let input = await event.request.json();
-        let from = EMAIL_FROM;
-        let to = CONTACT_FORM_TO;
         let name = "Arbide"
         let subject = "Mezu berria webgunetik" 
         let mezua = `
@@ -62,7 +60,7 @@ async function handleRequest(event) {
       }
     
   }
-  addEventListener('fetch', (event,env) => {
+  addEventListener('fetch', event => {
     return event.respondWith(handleRequest(event));
   });
   
