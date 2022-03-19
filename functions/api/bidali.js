@@ -1,66 +1,50 @@
-async function gatherResponse(response) {
-  const { headers } = response;
-  const contentType = headers.get('content-type') || '';
-  if (contentType.includes('application/json')) {
-    return JSON.stringify(await response.json());
-  } else if (contentType.includes('application/text')) {
-    return response.text();
-  } else if (contentType.includes('text/html')) {
-    return response.text();
-  } else {
-    return response.text();
-  }
-}
-
-
-async function handleRequest(event) {
+export async function onRequestPost(context) {
+  const {
+    request, // same as existing Worker API
+    env, // same as existing Worker API
+    params, // if filename includes [id] or [[path]]
+    waitUntil, // same as ctx.waitUntil in existing Worker API
+    next, // used for middleware or to fetch assets
+    data, // arbitrary space for passing data between middlewares
+  } = context;
     try {
-        let statusMsg;
-        let input = await event.request.json();
+        let input = await request.json();
         let name = "Arbide"
         let subject = "Mezu berria webgunetik" 
         let mezua = `
         Nork: ${input.izena}
-        Emaila: ${input.email}
+        Emaila: ${input.emaila}
         Mezua: ${input.mezua}
         `
         
         let res = await fetch("https://api.sendgrid.com/v3/mail/send", {
             method: "POST",
             headers: {
-              Authorization: "Bearer " + sendgrid_api_key
+              Authorization: `Bearer ${env.sendgrid_api_key}`,
+              'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                personalizations: {
-                  to: [{email: to, name: name}],
-                  subject: subject,
-                  content: [{
-                    type: "text/plain",
-                    value: mezua
-                  }],
-                  from: {email: EMAIL_FROM, name: "ez-erantzun"},
-                  reply_to: {email: EMAIL_FROM, name: "ez-erantzun"}
-                }
+              personalizations:[{"to":[{"email":env.CONTACT_FORM_TO,"name":name}],"subject":subject}],
+              content: [{"type": "text/plain", "value": mezua}],
+              from: {email: env.EMAIL_FROM, name: "ez-erantzun"},
+              reply_to: {email: env.EMAIL_FROM, name: "ez-erantzun"}
               })
             })
-
-        let result = await gatherResponse(res)
-        if (result.ok){
-          statusMsg="Mezua ondo bidali da"
-        } else {
-          statusMsg="Errorea bidalketan. " + result.status
-        }
-        return new Response(statusMsg, {
+        
+        return new Response({status: 'ok', message: 'email sent'}, {
           headers: {
             'Content-Type': 'application/json;charset=utf-8',
           },
         });
       } catch (err) {
-        return new Response('Error parsing JSON content' + err, { status: 400 });
+        console.log(err)
+        return new Response({status: 'ko', message: 'Some error ocurred'}, { 
+          status: 400,
+          headers: {
+            'Content-Type': 'application/json;charset=utf-8',
+          },
+        });
       }
     
   }
-  addEventListener('fetch', event => {
-    return event.respondWith(handleRequest(event));
-  });
   

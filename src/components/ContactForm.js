@@ -1,13 +1,22 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import ReCAPTCHA from "react-google-recaptcha";
+
 
 export default class EskariaForm extends React.Component {
-    state = {
+
+    recaptchaRef = React.createRef();
+    constructor(props){
+      super(props);
+      this.state = {
         izena: "",
         emaila: "",
         mezua: "",
+        disableSubmit: true,
+      };
     }
+    
     handleInputChange = event => {
         const target = event.target
         const value = target.value
@@ -16,6 +25,7 @@ export default class EskariaForm extends React.Component {
           [name]: value,
         })
       }
+    
     
     handleSubmit = async(event) => {
         event.preventDefault();
@@ -37,7 +47,7 @@ export default class EskariaForm extends React.Component {
           console.log(err);
         }
       };
-
+    setDis
     render() {
         return (
           <Form onSubmit={this.handleSubmit}>
@@ -56,7 +66,13 @@ export default class EskariaForm extends React.Component {
               <Form.Label>Mezua</Form.Label>
               <Form.Control as="textarea" placeholder="" onChange={this.handleInputChange}/>
             </Form.Group>
-            <Button type="submit">Bidali</Button>
+            <ReCAPTCHA
+              ref={this.recaptchaRef}
+              sitekey="6LcSFe4eAAAAAFXjalt3DIIeL9kdfP7o7TSv3oNq"
+              onChange={() => this.setState({disableSubmit: false})}
+            />
+            
+            <Button type="submit" disabled={this.state.disableSubmit}>Bidali</Button>
           </Form>
         )
       }
