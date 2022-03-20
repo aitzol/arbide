@@ -44,24 +44,6 @@ const IndexPage = () => (
     </section>
 
    
-    <section id="contact" className="projects-section bg-light">
-      <div class="container">
-      <div className="row align-items-center no-gutters mb-4 mb-lg-5">
-          <div className="col-xl-8 col-lg-7">
-            <img className="img-fluid mb-3 mb-lg-0" src={kontaktua} alt="" />
-          </div>
-          <div className="col-xl-4 col-lg-5">
-            <div className="featured-text text-center text-lg-left">
-              <h4>Kontaktua</h4>
-              <p className="text-black-50 mb-0">
-                Gurekin harremanetan jarri nahi izan ezkero idatzi <strong>arbideskalada@gmail.com</strong> helbidera.
-              </p>
-            </div>
-          </div>
-        </div>  
-      </div> 
-    </section>
-    
     <SocialLinks />
     <Footer />
   </Layout>
