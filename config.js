@@ -1,3 +1,4 @@
+
 module.exports = {
   siteTitle: 'Arbide eskalada taldea', // <title>
   manifestName: 'Arbide',

@@ -78,7 +78,7 @@ export default class EskariaForm extends React.Component {
             {!this.state.sendOK &&
             <ReCAPTCHA
               ref={this.recaptchaRef}
-              sitekey={process.env.RECAPTCHA_KEY}
+              sitekey="6LcSFe4eAAAAAFXjalt3DIIeL9kdfP7o7TSv3oNq"
               onChange={() => this.setState({disableSubmit: false})}
             />
             }
