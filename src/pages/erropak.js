@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "gatsby"
 
 import Layout from '../components/Layout';
 import Header from '../components/Header';
@@ -64,7 +65,9 @@ const RokodromoaPage = () => (
             <div className="bg-black text-center h-100 project">
               <div className="d-flex h-100">
                 <div className="project-text w-100 my-auto text-center text-lg-right">
-                  
+                <h4 className="text-white">
+                  Erropen aurre eskaria egiteko erabili formulario <Link to="https://labur.eus/WjNFI">hau</Link>
+                  </h4>
                 </div>
               </div>
             </div>

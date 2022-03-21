@@ -94,7 +94,9 @@ export default class Header extends Component {
             */} 
               <Link to="/rokodromoa" className='nav-link'>Rokodromoa</Link>
                   </li>
-         
+                  <li className="nav-item">
+                  <Link to="/erropak" className='nav-link'>Erropak</Link>
+                  </li>
                   <li className="nav-item">
                     {/*
                     <Scroll
