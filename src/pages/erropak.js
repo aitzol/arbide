@@ -13,6 +13,8 @@ import sudBaltza from '../assets/images/erropak/sud_baltza.png';
 import kamBaltza from '../assets/images/erropak/kam_baltza.png';
 import kamGrise from '../assets/images/erropak/kam_grise.png';
 import kamZurixe from '../assets/images/erropak/kam_zurixe.png';
+import teknikoZurixe from '../assets/images/erropak/teknikozurixe.png';
+import teknikoBaltza from '../assets/images/erropak/teknikobaltza.png';
 
 const RokodromoaPage = () => (
   <Layout>
@@ -132,7 +134,38 @@ const RokodromoaPage = () => (
             </div>
           </div>
         </div>
+        <div className="row justify-content-center no-gutters mb-5 mb-lg-0">
+          <div className="col-lg-6">
+            <img className="img-fluid" src={teknikoZurixe} alt="" />
+          </div>
+          <div className="col-lg-6">
+            <div className="bg-black text-center h-100 project">
+              <div className="d-flex h-100">
+                <div className="project-text w-100 my-auto text-center text-lg-left">
+                  <h4 className="text-white">Teknikuk</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div className="row justify-content-center no-gutters">
+          <div className="col-lg-6">
+            <img className="img-fluid" src={teknikoBaltza} alt="" />
+          </div>
+          <div className="col-lg-6 order-lg-first">
+            <div className="bg-black text-center h-100 project">
+              <div className="d-flex h-100">
+                <div className="project-text w-100 my-auto text-center text-lg-right">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
+      
+    
     </section>
     <SocialLinks />
     <Footer />
