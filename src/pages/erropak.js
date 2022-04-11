@@ -68,7 +68,7 @@ const RokodromoaPage = () => (
               <div className="d-flex h-100">
                 <div className="project-text w-100 my-auto text-center text-lg-right">
                 <h4 className="text-white">
-                  Erropen aurre eskaria egiteko erabili formulario <Link to="https://labur.eus/WjNFI">hau</Link>
+                  Momentu honetan ez dago erropak eskatzeko aukerarik.
                   </h4>
                 </div>
               </div>
