@@ -30,8 +30,8 @@ export async function onRequestPost(context) {
               reply_to: {email: env.EMAIL_FROM, name: "ez-erantzun"}
               })
             })
-        
-        return new Response(`Mezua bidali da ${res.text()}`, {
+        const resText = await res.text()
+        return new Response(`Mezua bidali da ${resText}`, {
           headers: {
             'Content-Type': 'application/json;charset=utf-8',
           },
