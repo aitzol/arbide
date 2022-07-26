@@ -31,7 +31,7 @@ export async function onRequestPost(context) {
               })
             })
         
-        return new Response(`Mezua bidali da ${res.status_code}`, {
+        return new Response(`Mezua bidali da ${res.text()}`, {
           headers: {
             'Content-Type': 'application/json;charset=utf-8',
           },
