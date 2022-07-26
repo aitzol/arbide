@@ -31,14 +31,13 @@ export async function onRequestPost(context) {
               })
             })
         
-        return new Response({status: 'ok', message: 'email sent'}, {
+        return new Response('Mezua bidali da', {
           headers: {
             'Content-Type': 'application/json;charset=utf-8',
           },
         });
       } catch (err) {
-        console.log(err)
-        return new Response({status: 'ko', message: 'Some error ocurred'}, { 
+        return new Response(`${err.message}\n${err.stack}`, { 
           status: 400,
           headers: {
             'Content-Type': 'application/json;charset=utf-8',
