@@ -28,22 +28,11 @@ const RokodromoaPage = () => (
     </header>
     <section id="rokodromoa" className="projects-section">
       <div className="container">
-        {/*
-        <div className="row align-items-center no-gutters mb-4 mb-lg-5">
-          <div className="col-xl-8 col-lg-7">
-            <img className="img-fluid mb-3 mb-lg-0" src={bgRokodromoa} alt="" />
-          </div>
-          <div className="col-xl-4 col-lg-5">
-            <div className="featured-text text-center text-lg-left">
-              <h4>Rokodromoa</h4>
-              <p className="text-black-50 mb-0">
-                Taldelanean eraikitzen ari gara tamaina handiko rokodromo bat. 
-                Bertan eskainiko dira...
-              </p>
-            </div>
-          </div>
+        <div className="row justify-content-center no-gutters mb-5 mb-lg-0">
+          <h2>Momentu honetan ez dago erropa eskatzeko aukerarik</h2>
+          <p>Azken berriak jasotzekoJarraitu gure kontua <Link to="https://www.instagram.com/arbideeskaladataldea/">instagramen</Link></p>
+          
         </div>
-        */}
         <div className="row justify-content-center no-gutters mb-5 mb-lg-0">
           <div className="col-lg-6">
             <img className="img-fluid" src={sudUrdina} alt="" />
@@ -67,9 +56,7 @@ const RokodromoaPage = () => (
             <div className="bg-black text-center h-100 project">
               <div className="d-flex h-100">
                 <div className="project-text w-100 my-auto text-center text-lg-right">
-                <h4 className="text-white">
-                  Momentu honetan ez dago erropak eskatzeko aukerarik.
-                  </h4>
+              
                 </div>
               </div>
             </div>
