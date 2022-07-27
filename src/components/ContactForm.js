@@ -40,16 +40,14 @@ export default class EskariaForm extends React.Component {
             mezua: this.state.mezua,
           })})
           this.setState({sendOK: true});
-        } catch (err) {
-          console.log(err);
-        }
+        } catch (err) { }
       };
 
     render() {
         return (
           
           <Form onSubmit={this.handleSubmit}>
-            <Alert show={this.state.sendOK} variant="success" style={{ width: "42rem" }}>
+            <Alert show={this.state.sendOK} variant="success">
               <Alert.Heading>
               Eskerrik asko, ahal bezain azkar emango dizugu erantzuna
               </Alert.Heading>
