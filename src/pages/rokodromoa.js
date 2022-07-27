@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "gatsby"
 
 import config from '../../config';
 
@@ -7,12 +8,14 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SocialLinks from '../components/SocialLinks';
 
-import bgRokodromoa from '../assets/images/rokodromoa.jpg';
-import bgRokodromoa1 from '../assets/images/rokodromoa1.jpeg';
+import bgRokodromoa from '../assets/images/rokodromo_berria_resized.jpg';
+import bgRokodromoa1 from '../assets/images/rokodromo_berria1_resized.jpg';
+import bgRokodromoa2 from '../assets/images/rokodromo_berria3_resized.jpg';
 
 const RokodromoaPage = () => (
   <Layout>
     <Header />
+
     <header className="masthead">
       <div className="container d-flex h-100 align-items-center">
         <div className="mx-auto text-center">
@@ -48,10 +51,10 @@ const RokodromoaPage = () => (
                 <div className="project-text w-100 my-auto text-center text-lg-left">
                   <h4 className="text-white">Rokodromoa</h4>
                   <p className="mb-0 text-white-50">
-                  Taldelanean eraikitzen ari gara tamaina handiko rokodromo bat. 
+                  Tamaina handiko rokodromo bat eraiki dugu talde lanean. 
                 Ikastaro eta ekintza desberdinak antolatuko dira bertan.
                   </p>
-                  <hr className="d-none d-lg-block mb-0 ml-0" />
+                  
                 </div>
               </div>
             </div>
@@ -68,9 +71,31 @@ const RokodromoaPage = () => (
                 <div className="project-text w-100 my-auto text-center text-lg-right">
                   <h4 className="text-white">Gune desberdinak</h4>
                   <p className="mb-0 text-white-50">
-                    Eskalada mota desberdinak entrenatu ahal izateko gune desberdinak dauzka rokodromoak
+                    Eskaladarako prestakuntza burutu ahal izateko gune desberdinak dauzka rokodromoak. Bloke zein iraupeneko eskalada prestatzeko guneak, campus board handia, ...
                   </p>
-                  <hr className="d-none d-lg-block mb-0 mr-0" />
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row justify-content-center no-gutters mb-5 mb-lg-0">
+          <div className="col-lg-6">
+            <img className="img-fluid" src={bgRokodromoa2} alt="" />
+          </div>
+          <div className="col-lg-6">
+            <div className="bg-black text-center h-100 project">
+              <div className="d-flex h-100">
+                <div className="project-text w-100 my-auto text-center text-lg-left">
+                  <h4 className="text-white">Erabilpena</h4>
+                  <p className="mb-0 text-white-50">
+                    <ul>
+                      <li>Bazkidetza</li>
+                      <li>Hilabeteko erabiltzaile izatea</li>
+                      <li>Ikastaroetan parte hartu</li>
+                    </ul>
+                    <span>Informazio gehiago behar baduzu <Link to="/kontaktua">jarri gurekin kontaktuan</Link></span>
+                  </p>
                 </div>
               </div>
             </div>
