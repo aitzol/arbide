@@ -30,7 +30,7 @@ const RokodromoaPage = () => (
       <div className="container">
         <div className="row justify-content-center no-gutters mb-5 mb-lg-0">
           <h2>Momentu honetan ez dago erropa eskatzeko aukerarik</h2>
-          <p>Azken berriak jasotzekoJarraitu gure kontua <Link to="https://www.instagram.com/arbideeskaladataldea/">instagramen</Link></p>
+          <p>Azken berriak jasotzeko jarraitu gure kontua <Link to="https://www.instagram.com/arbideeskaladataldea/">instagramen</Link></p>
           
         </div>
         <div className="row justify-content-center no-gutters mb-5 mb-lg-0">
