@@ -10,29 +10,17 @@ export default function SocialLinks() {
       <div className="container">
       <h4  className="text-white">Laguntzaileak</h4>
         <div className="row">
+          <div className="col-md-4 mb-3 mb-md-0"></div>
           <div className="col-md-4 mb-3 mb-md-0">
             <div className="card py-4 h-100">
               <div className="card-body text-center">
-                <img className="img-fluid" src={udala} alt="Ondarroako udalaren logoa" />
+                <img className="img-fluid" src={udala} alt="Ondarroako udalaren logoa" width="30%" />
+                <img className='img-fluid' src={kide} alt="Kide enpresaren logoa" width="15%" />
+                <img className='img-fluid' src={eika} alt="Eika enpresaren logoa" width="30%"/>
               </div>
             </div>
           </div>
-
-          <div className="col-md-4 mb-3 mb-md-0">
-            <div className="card py-4 h-100">
-              <div className="card-body text-center">
-                <img className='img-fluid' src={kide} alt="Kide enpresaren logoa"/>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-md-4 mb-3 mb-md-0">
-            <div className="card py-4 h-100">
-              <div className="card-body text-center">
-                <img className='img-fluid' src={eika} alt="Eika enpresaren logoa"/>
-              </div>
-            </div>
-          </div>
+          <div className="col-md-4 mb-3 mb-md-0"></div>
         </div>
 
         <div className="social d-flex justify-content-center">
