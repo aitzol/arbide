@@ -19,13 +19,7 @@ import teknikoBaltza from '../assets/images/erropak/teknikobaltza.png';
 const RokodromoaPage = () => (
   <Layout>
     <Header />
-    <header className="masthead">
-      <div className="container d-flex h-100 align-items-center">
-        <div className="mx-auto text-center">
-          <h1 className="mx-auto my-0 text-uppercase">Erropak</h1>
-        </div>
-      </div>
-    </header>
+    
     <section id="rokodromoa" className="projects-section">
       <div className="container">
         <div className="row justify-content-center no-gutters mb-5 mb-lg-0">
