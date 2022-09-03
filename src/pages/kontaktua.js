@@ -20,7 +20,7 @@ const KontaktuaPage = () => (
             <div className="featured-text text-center text-lg-left">
               <h4>Kontaktua</h4>
               <p className="text-black-50 mb-0">
-              Gurekin kontaktuan jartzeko idatzi <a href="mailto://arbideskalada@gmail.com">arbideskalada@gmail.com</a>"
+              Gurekin kontaktuan jartzeko idatzi <a href="mailto://arbideskalada@gmail.com">arbideskalada@gmail.com</a> helbidera.
               </p>
             </div>
           </div>
