@@ -18,11 +18,7 @@ const IndexPage = () => (
     <header className="masthead">
       <div className="container d-flex h-100 align-items-center">
         <div className="mx-auto text-center">
-          <h1 className="mx-auto my-0 text-uppercase">Bloke txapelketa</h1>
-          <h2 className="text-white-50 mx-auto mt-2 mb-5">
-          Urriak 9an Arbide elkarteko lehen bloke txapelketa egingo dugu.<br/>
-              <a href="https://forms.gle/cy5NVERFZE2ChDPH6">Animatu eta izena eman!</a>
-          </h2>
+          <h1 className="mx-auto my-0 text-uppercase">{config.heading}</h1>
         </div>
       </div>
     </header>
