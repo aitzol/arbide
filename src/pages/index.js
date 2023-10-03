@@ -14,7 +14,7 @@ import txapelketa from '../assets/images/txapelketa.png';
 const IndexPage = () => (
   <Layout>
     <Header />
-
+  {/* 
     <header className="masthead">
       <div className="container d-flex h-100 align-items-center">
         <div className="mx-auto text-center">
@@ -22,13 +22,13 @@ const IndexPage = () => (
         </div>
       </div>
     </header>
-
-    <section id="taldea" className="about-section text-center">
+*/}
+    <section id="taldea" className="projects-section">
       <div className="container">
         <div className="row">
           <div className="col-lg-8 mx-auto">    
-            <h2 className="text-white mb-4">{config.heading}</h2>
-            <p className="text-white-50">
+            <h2 className="text-black mb-4">{config.heading}</h2>
+            <p className="text-black-50">
               Arbide eskalada taldea 2021ean sortu zen Ondarroan dagoen eskalada 
               zaletasunarentzako baliabide egokiak sortu eta eskaintzeko asmoarekin.
             </p>

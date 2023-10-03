@@ -67,48 +67,19 @@ export default class Header extends Component {
               >
                 <ul className="navbar-nav ml-auto">
                   <li className="nav-item">
-                      {/*
-                    <Scroll
-                      onClick={_ => this.toggleMenu(!openMenu)}
-                      type="id"
-                      element="taldea"
-                    >
-                      <a className="nav-link" href="#about">
-                        Eskalada taldea
-                      </a>
-                    </Scroll>
-              */}
                     <Link to="/" className='nav-link'>Eskalada taldea</Link>
                   </li>
                   <li className="nav-item">
-                    {/*}
-                    <Scroll
-                      onClick={_ => this.toggleMenu(!openMenu)}
-                      type="id"
-                      element="rokodromoa"
-                    >
-                      <a className="nav-link" href="#projects">
-                        Rokodromoa
-                      </a>
-                    </Scroll>
-            */} 
-              <Link to="/rokodromoa" className='nav-link'>Rokodromoa</Link>
+                    <Link to="/bloke-txapelketa" className='nav-link'>II. Bloke txapelketa</Link>
                   </li>
+                  <li>
+                  <Link to="/rokodromoa" className='nav-link'>Rokodromoa</Link>
+                  </li>
+                  
                   <li className="nav-item">
                   <Link to="/erropak" className='nav-link'>Erropak</Link>
-                  </li>
+              </li>
                   <li className="nav-item">
-                    {/*
-                    <Scroll
-                      onClick={_ => this.toggleMenu(!openMenu)}
-                      type="id"
-                      element="contact"
-                    >
-                      <a className="nav-link" href="#signup">
-                        Kontaktua
-                      </a>
-                    </Scroll>
-          */}
                   <Link to="/kontaktua" className='nav-link'>Kontaktua</Link>
                   </li>
                 </ul>
