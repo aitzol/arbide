@@ -29,6 +29,7 @@ const RokodromoaPage = () => (
           </p>
           
         </div>
+        {/*
         <div className="row justify-content-center no-gutters mb-5 mb-lg-0">
           <div className="col-lg-6">
             <a href="https://labur.eus/arbide-2-bloke-txapelketa">
@@ -37,7 +38,7 @@ const RokodromoaPage = () => (
           </div>
   
         </div>
-      
+*/}      
       </div>
 
       
