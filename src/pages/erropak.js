@@ -6,15 +6,6 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SocialLinks from '../components/SocialLinks';
 
-import sudUrdina from '../assets/images/erropak/sud_urdina.png';
-import sudGrise from '../assets/images/erropak/sud_grise.png';
-import sudBaltza from '../assets/images/erropak/sud_baltza.png';
-
-import kamBaltza from '../assets/images/erropak/kam_baltza.png';
-import kamGrise from '../assets/images/erropak/kam_grise.png';
-import kamZurixe from '../assets/images/erropak/kam_zurixe.png';
-import teknikoZurixe from '../assets/images/erropak/teknikozurixe.png';
-import teknikoBaltza from '../assets/images/erropak/teknikobaltza.png';
 
 const RokodromoaPage = () => (
   <Layout>
@@ -23,125 +14,24 @@ const RokodromoaPage = () => (
     <section id="rokodromoa" className="projects-section">
       <div className="container">
         <div className="row justify-content-center no-gutters mb-5 mb-lg-0">
-          <h2>Momentu honetan ez dago erropa eskatzeko aukerarik</h2>
-          <p>Azken berriak jasotzeko jarraitu gure kontua <Link to="https://www.instagram.com/arbideeskaladataldea/">instagramen</Link></p>
-          
-        </div>
-        <div className="row justify-content-center no-gutters mb-5 mb-lg-0">
-          <div className="col-lg-6">
-            <img className="img-fluid" src={sudUrdina} alt="" />
-          </div>
-          <div className="col-lg-6">
-            <div className="bg-black text-center h-100 project">
-              <div className="d-flex h-100">
-                <div className="project-text w-100 my-auto text-center text-lg-left">
-                  <h4 className="text-white">Sudaderak</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      
-        <div className="row justify-content-center no-gutters">
-          <div className="col-lg-6">
-            <img className="img-fluid" src={sudBaltza} alt="" />
-          </div>
-          <div className="col-lg-6 order-lg-first">
-            <div className="bg-black text-center h-100 project">
-              <div className="d-flex h-100">
-                <div className="project-text w-100 my-auto text-center text-lg-right">
-              
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="row justify-content-center no-gutters mb-5 mb-lg-0">
-          <div className="col-lg-6">
-            <img className="img-fluid" src={sudGrise} alt="" />
-          </div>
-          <div className="col-lg-6">
-            <div className="bg-black text-center h-100 project">
-              <div className="d-flex h-100">
-                <div className="project-text w-100 my-auto text-center text-lg-left">
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      
-        <div className="row justify-content-center no-gutters">
-          <div className="col-lg-6">
-            <img className="img-fluid" src={kamZurixe} alt="" />
-          </div>
-          <div className="col-lg-6 order-lg-first">
-            <div className="bg-black text-center h-100 project">
-              <div className="d-flex h-100">
-                <div className="project-text w-100 my-auto text-center text-lg-right">
-                <h4 className="text-white">Kamisetak</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="row justify-content-center no-gutters mb-5 mb-lg-0">
-          <div className="col-lg-6">
-            <img className="img-fluid" src={kamGrise} alt="" />
-          </div>
-          <div className="col-lg-6">
-            <div className="bg-black text-center h-100 project">
-              <div className="d-flex h-100">
-                <div className="project-text w-100 my-auto text-center text-lg-left">
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="row justify-content-center no-gutters">
-          <div className="col-lg-6">
-            <img className="img-fluid" src={kamBaltza} alt="" />
-          </div>
-          <div className="col-lg-6 order-lg-first">
-            <div className="bg-black text-center h-100 project">
-              <div className="d-flex h-100">
-                <div className="project-text w-100 my-auto text-center text-lg-right">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="row justify-content-center no-gutters mb-5 mb-lg-0">
-          <div className="col-lg-6">
-            <img className="img-fluid" src={teknikoZurixe} alt="" />
-          </div>
-          <div className="col-lg-6">
-            <div className="bg-black text-center h-100 project">
-              <div className="d-flex h-100">
-                <div className="project-text w-100 my-auto text-center text-lg-left">
-                  <h4 className="text-white">Teknikuk</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      
-        <div className="row justify-content-center no-gutters">
-          <div className="col-lg-6">
-            <img className="img-fluid" src={teknikoBaltza} alt="" />
-          </div>
-          <div className="col-lg-6 order-lg-first">
-            <div className="bg-black text-center h-100 project">
-              <div className="d-flex h-100">
-                <div className="project-text w-100 my-auto text-center text-lg-right">
-                </div>
-              </div>
-            </div>
-          </div>
+          <h2>Erropak eskatzeko aukera zabalik</h2>
+          <p>Arbideko mateixal barrixe nahibazu ontxe akazu aukeri erosteko! Ongun nobedadikin gatoz, kamiseta eta sudaderetaz gain, praka desberdinak, buff-ak eta motxili erosteko aukeri eongora ongo urtin</p>
+          <p>Martxoak 31 arte iratxe eongo da erropak eskatzeko aukeri. Erropak egun hortatik aurrea eskatuko gakoz hornitzailiai eta jasoten douzenin abisakotzuau bille etorteko</p>          
+          <p><strong>Eskarixe etxeko</strong>
+            <ol>
+              <li>Sartu <Link to="https://arbide.atwebpages.com/">dendako webgunin</Link></li>
+              <li>Produktu desberdinak aukeratu (saskira gehitu)</li>
+              <li>Erosketa burutu botoiai emon.</li>
+              <li>Kontaktu errezteko datu guztik sartu.</li>
+              <li>Transferentzixa bidez ein ordainketi (ezta beste ordainketa aukeraik).
+                <ul>
+                  <li>Eskari kodea eta izen abizenak jarri transferentzixin deskribapenin</li>                
+                  <li>Eskari kode: Eskarixe etxen danin datutan jarritako korreo elektronikure aiakoatzun kode edo eskari zenbakixe.</li>
+                  </ul>
+              </li>
+              <li>Edozein zalantza baakazue idatzi <a href="mailto:arbideskalada@gmail.com">arbideskalada@gmail.com</a> eta ahal bezain bixkor erantzungorou (pazientzixa bixkat mesedez :) )</li>
+            </ol>
+          </p>
         </div>
       </div>
 
