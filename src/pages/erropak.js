@@ -15,6 +15,8 @@ const RokodromoaPage = () => (
       <div className="container">
         <div className="row justify-content-center no-gutters mb-5 mb-lg-0">
           <h2>Erropak allariz</h2>
+        </div>
+        <div className="row no-gutters mb-5 mb-lg-0">
           <p>Pediduk preparaten gabiz eta datorren martizena eta eguenin  (maiatzk 21 eta 23) 17:30 - 18:30</p>
           <p>lokalin eongo ga jasoteko</p>          
           <p>
