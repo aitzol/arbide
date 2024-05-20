@@ -6,8 +6,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SocialLinks from '../components/SocialLinks';
 
-import kartela from '../assets/images/arb_egu.pnh';
-import gaztekartela from '../assets/images/gazte-kartela.jpeg';
+import kartela from '../assets/images/arb_egu.png';
 
 const RokodromoaPage = () => (
   <Layout>
