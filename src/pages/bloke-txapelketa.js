@@ -37,7 +37,7 @@ const RokodromoaPage = () => (
                 <p><h4>Zubi zaharrin 17:00</h4>
                   <ul>
                     <li>Psikoblock txapeketi</li>
-                    <li>apuntateko <a mailto="arbideskalada@gmail.com">arbideskalada@gmail.com</a> helbidea idatzi eta izen abizena eta edadi adierazi </li>
+                    <li>apuntateko <a mailto="arbideskalada@gmail.com">arbideskalada@gmail.com</a> helbidea idatzi eta izen abizena eta edadi adierazi</li>
                   </ul>
                 </p>
                 </div>
@@ -45,28 +45,6 @@ const RokodromoaPage = () => (
             </div>
           </div>
         </div>
-      
-        <div className="row justify-content-center no-gutters">
-          <div className="col-lg-6">
-            <img className="img-fluid" src={gaztekartela} alt="" />
-          </div>
-          <div className="col-lg-6 order-lg-first">
-            <div className="bg-white text-center h-100 project">
-              <div className="d-flex h-100">
-                <div className="project-text w-100 my-auto text-center text-lg-right">
-                <h3>Gazteen I. Bloke txapelketa herrikoia</h3>
-              <p>2023ko azaroak 11an ospatuko da Arbideko lehen gazte bloke txapelketa herrikoia. <a href="https://labur.eus/gazteen-bloke-txapelketa">Izen ematea</a> urriak 
-            30 bitarte zabalik egongo da.
-          </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
- 
-
       </div>
 
       
