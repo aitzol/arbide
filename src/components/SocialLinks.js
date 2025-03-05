@@ -15,8 +15,7 @@ export default function SocialLinks() {
             <div className="card py-4 h-100">
               <div className="card-body text-center">
                 <img className="img-fluid" src={udala} alt="Ondarroako udalaren logoa" width="30%" />
-                <img className='img-fluid' src={kide} alt="Kide enpresaren logoa" width="15%" />
-                <img className='img-fluid' src={eika} alt="Eika enpresaren logoa" width="30%"/>
+               
               </div>
             </div>
           </div>
