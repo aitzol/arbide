@@ -26,7 +26,7 @@ const RokodromoaPage = () => (
                 <div className="project-text w-100 my-auto text-center text-lg-left">
                 <h3>Izen ematea</h3>
                 <ul>
-                  <li>Epea: Azaroak 29</li>
+                  <li>Epea: Azaroak 25</li>
                   <li>Bete datuak <a href="https://labur.eus/txapelketa-herrikoia-2025-11-29">hemen</a></li>
                   </ul>
                 </div>
