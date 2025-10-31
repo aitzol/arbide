@@ -1,8 +1,9 @@
 const config = require('./config');
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
 
+// Detect Cloudflare Pages environment
 const isCloudflare = process.env.CF_PAGES === '1';
 
 module.exports = {
@@ -21,9 +22,11 @@ module.exports = {
         background_color: config.manifestBackgroundColor,
         theme_color: config.manifestThemeColor,
         display: config.manifestDisplay,
-        icon: config.manifestIcon, // This path is relative to the root of the site.
+        icon: config.manifestIcon,
       },
     },
     'gatsby-plugin-sass',
-  ],
+    // Only include offline plugin when NOT on Cloudflare
+    !isCloudflare && 'gatsby-plugin-offline',
+  ].filter(Boolean),
 };
