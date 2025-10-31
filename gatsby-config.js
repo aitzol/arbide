@@ -2,6 +2,9 @@ const config = require('./config');
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
+
+const isCloudflare = process.env.CF_PAGES === '1';
+
 module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
@@ -22,6 +25,5 @@ module.exports = {
       },
     },
     'gatsby-plugin-sass',
-    'gatsby-plugin-offline',
   ],
 };
