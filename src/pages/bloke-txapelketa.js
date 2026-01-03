@@ -5,7 +5,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SocialLinks from '../components/SocialLinks';
 
-import kartela from '../assets/images/gazte-bloke-txapelketa-2026.jpg';
+import kartela from '../assets/images/gazte-bloke-txapelketa-2026.jpeg';
 
 const RokodromoaPage = () => (
   <Layout>
