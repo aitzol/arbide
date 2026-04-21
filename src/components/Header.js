@@ -68,11 +68,17 @@ export default class Header extends Component {
                 id="navbarResponsive"
               >
                 <ul className="navbar-nav ml-auto">
+
                   <li className="nav-item">
                     <Link to="/" className='nav-link'>Eskalada taldea</Link>
                   </li>
+                  
                   <li className="nav-item">
                     <Link to="/bloke-txapelketa" className='nav-link'>Bloke txapelketa</Link>
+                  </li>
+                  
+                  <li className="nav-item">
+                    <Link to="/psikoblock" className='nav-link'>Psikoblock txapelketa</Link>
                   </li>
                   <li>
                   <Link to="/rokodromoa" className='nav-link'>Rokodromoa</Link>
